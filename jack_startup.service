@@ -1,0 +1,16 @@
+[Unit]
+Description=Start Jackd and Connect Audio at Boot
+After=sound.target multi-user.target
+Requires=sound.target
+
+[Service]
+ExecStart=/usr/local/bin/jack_startup.sh
+Type=simple
+User=patch
+Group=patch
+Environment="JACK_NO_AUDIO_RESERVATION=1"
+Restart=on-failure
+ExecStartPre=/bin/sleep 10
+
+[Install]
+WantedBy=multi-user.target
