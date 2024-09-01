@@ -18,4 +18,4 @@
 # alias mv='mv -i'
 
 #Command line prompt colouring 
-PS1='\[\032[01;32m\]\u@\h \[\033[01;32m\]\w \$\[\033[00m\] '
+PS1='\[\033[01;32m\]\u@\h \[\033[01;32m\]\w \$ '
